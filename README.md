@@ -9,7 +9,7 @@
     * 액션02. components 폴더에 Movive 컴포넌트 옮기기
     * 액션03. routes 폴더에 라우터가 보여줄 화면 만들기
     * 액션04. Home.js 수정하기
-    * 액션05. Home.css 만들기
+    * 액션05. Home.css 만들기/
     * 액션06. App.js 수정하기
    
 
