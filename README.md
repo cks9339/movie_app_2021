@@ -1,4 +1,37 @@
+
+
 ## 김민혁 201640208
+
+### [ 11월 17일]
+<pre>
+<code>
+HandleChange(e){
+    this.setState({text:e.target.value})
+}
+HandleSubmit(e){ 
+    e.preventDefault()
+    if (this.state.text.length ===0){
+        return 
+    }
+    const newItem = {
+        text: this.state.text,
+        id: Date.now()
+    } 
+    this.setState(state => ({
+        items: state.items.concat(newItem), 
+        text: ''
+    }))    
+}
+</code>
+</pre>
+### HandleSubmit(e)에서 e.preventDefault() 메소드를 사용하는 이유는?
+브라우저에서 양식을 제출할 때는 기본적으로 브라우저의 새로 고침이 발생하는데, React나
+SPA의 경우 필요가 없는 동작임으로 이를 방지하기 위해 사용한다.
+1. stae.text의 길이가 0이면 아무 것도 반환하지 않는다.
+2. 0이 아니면 newitem에 입력 받은 text와 현재 시간을 저장한다.
+3. 현재 시간은 왜 저장하는 걸까? 조금 생각해 보자.
+4. 이렇게 저장된 newitem을 state의 item배열에 저장하고 , text를 비운다.
+
 
 [ 11월 3일]
 네비게이션 만들어 보기
